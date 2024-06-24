@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+nav{
+    width: 100vw;
+    padding: 10px;
+    background-color: rgb(151, 229, 253);
+    color: rgb(44, 32, 213);
+    height: 65px;
+    font-size: 27px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul{
+    list-style-type: none;
+    padding: 20px;
+}
+
+.flex{
+    display: flex;
+}
+
+.gameContainer{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.container{
+    width: 30vw;
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    font-family: 'Roboto', sans-serif;
+   align-self: center;
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover{
+    background-color: rgba(151, 229, 253, 0.203);
+}
+
+.info {
+    font-size: 22px;
+}
+
+.gameInfo{
+    padding: 0 34px;
+    font-family: 'Baloo Bhaina 2', cursive;
+    width: 45%;
+}
+
+.gameInfo h1{
+    font-size: 2.5rem;
+}
+
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.bl-0{
+    border-left: 0;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+#reset {
+    margin: 0 23px;
+    height: 50px;
+    padding: 1px 18px;
+    background: rgba(151, 229, 253, 0.45);
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Baloo Bhaina 2';
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+#back{
+    margin: 0 23px;
+    height: 50px;
+    padding: 1px 18px;
+    background: rgba(151, 229, 253, 0.45);
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Baloo Bhaina 2';
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+.line{
+    background-color: black;
+    height: 3px;
+    width: 0;
+    position: absolute;
+    background-color: rgb(44, 32, 213);
+    transition: width 1s ease-in-out;
+}
+
+#base{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+#winner{
+    width: 45%;
+    margin: 10px;
+    display: flex;
+}
+
+.p{
+    display: flex;
+    padding: 10px;
+    font-size: 20px;
+    color: rgb(44, 32, 213);
+    font-weight: bolder;
+}
+
+#score1,#score2{
+    margin-left: 20px;
+    color: rgb(89, 205, 241);
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 950px)
+{
+    .gameContainer{
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container { 
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+
+    #base{
+        flex-direction: column;
+    }
+    .line{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .gameContainer {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .gameInfo {
+        margin-top: 34px;
+        width: 90%;
+    }
+    .gameInfo h1 {
+        font-size: 1.5rem;
+    }
+    .container {
+        width: 90vw;
+        grid-template-rows: repeat(3, 20vw);
+        grid-template-columns: repeat(3, 20vw);
+    }
+    .box {
+        font-size: 20vw;
+    }
+    .info {
+        font-size: 18px;
+    }
+    #winner {
+        width: 90%;
+    }
+    .p {
+        font-size: 18px;
+    }
+    #reset, #back {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .gameInfo h1 {
+        font-size: 1.2rem;
+    }
+    .container {
+        width: 100vw;
+        grid-template-rows: repeat(3, 30vw);
+        grid-template-columns: repeat(3, 30vw);
+    }
+    .box {
+        font-size: 25vw;
+    }
+    .info {
+        font-size: 16px;
+    }
+    .p {
+        font-size: 16px;
+    }
+    #reset, #back {
+        font-size: 10px;
+        padding: 0 8px;
+    }
+    #winner {
+        flex-direction: column;
+        align-items: center;
+    }
+}
