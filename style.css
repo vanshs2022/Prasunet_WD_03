@@ -188,6 +188,12 @@ nav ul{
     .line{
         display: none;
     }
+
+    .imgbox{
+        bottom: 320px;
+        left: 60px;
+        opacity: 0.8;
+    }
 }
 
 @media screen and (max-width: 950px) {
