@@ -10,13 +10,14 @@ body{
     justify-content: center;
     align-items: center;
     overflow-x: hidden;
+    background-color: rgba(253,253,253,255);
 }
 
 nav{
     width: 100vw;
     padding: 10px;
     background-color: rgb(151, 229, 253);
-    color: rgb(44, 32, 213);
+    color: black;
     height: 65px;
     font-size: 27px;
     font-weight: bolder;
@@ -47,7 +48,8 @@ nav ul{
     grid-template-rows: repeat(3, 10vw);
     grid-template-columns: repeat(3, 10vw);
     font-family: 'Roboto', sans-serif;
-   align-self: center;
+    align-self: center;
+    margin: 20px;
 }
 
 .box{
@@ -75,6 +77,12 @@ nav ul{
 
 .gameInfo h1{
     font-size: 2.5rem;
+}
+
+.imgbox{
+    position: absolute;
+    bottom: 50px;
+    right: 200px
 }
 
 .imgbox img{

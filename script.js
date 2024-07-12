@@ -63,6 +63,7 @@ const checkWin = () => {
             document.querySelector('.info').innerText = (boxtext[e[0]].innerText=='X'?player1:player2) + " Won";
             isgameover = true;
             document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "200px";
+            gameover.play()
             
             // Get screen width
             let screenWidth = window.innerWidth;
